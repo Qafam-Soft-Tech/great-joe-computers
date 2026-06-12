@@ -1,0 +1,20 @@
+{
+  "name": "great-joe-computers",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w backend\" \"npm run start -w frontend\"",
+    "install-all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "dependencies": {
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.1.0"
+  }
+}
